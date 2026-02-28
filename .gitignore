@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output (keep built/ in repo for Ghost deployment)
+# assets/built/
+
+# Distribution
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+yarn-error.log
+
+# Lock files
+yarn.lock
+package-lock.json

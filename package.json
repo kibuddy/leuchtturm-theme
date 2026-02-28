@@ -1,0 +1,88 @@
+{
+  "name": "leuchtturm",
+  "description": "Leuchtturm - Custom Ghost Theme for KI-Buddy (Casper Fork)",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "ghost": ">=5.0.0",
+    "ghost-api": "v5"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Marek Schilke",
+    "url": "https://ki-buddy.cloud"
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "casper",
+    "leuchtturm",
+    "medienkompetenz"
+  ],
+  "config": {
+    "posts_per_page": 25,
+    "image_sizes": {
+      "xxs": { "width": 30 },
+      "xs": { "width": 100 },
+      "s": { "width": 300 },
+      "m": { "width": 600 },
+      "l": { "width": 1000 },
+      "xl": { "width": 2000 }
+    },
+    "card_assets": true,
+    "custom": {
+      "navigation_layout": {
+        "type": "select",
+        "options": ["Logo on cover", "Logo in the middle", "Stacked"],
+        "default": "Logo on cover"
+      },
+      "title_font": {
+        "type": "select",
+        "options": ["Modern sans-serif", "Elegant serif"],
+        "default": "Modern sans-serif"
+      },
+      "body_font": {
+        "type": "select",
+        "options": ["Modern sans-serif", "Elegant serif"],
+        "default": "Elegant serif"
+      },
+      "show_publication_cover": {
+        "type": "boolean",
+        "default": true
+      },
+      "header_style": {
+        "type": "select",
+        "options": ["Landing", "Highlight", "Magazine", "Search", "Hidden"],
+        "default": "Landing"
+      },
+      "color_scheme": {
+        "type": "select",
+        "options": ["Light", "Dark", "Auto"],
+        "default": "Light"
+      }
+    }
+  },
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "zip": "gulp zip",
+    "release": "gulp release"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "beeper": "^2.1.0",
+    "cssnano": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.1.0",
+    "inquirer": "^8.2.0",
+    "postcss": "^8.4.0",
+    "postcss-color-mod-function": "^3.0.3",
+    "postcss-easy-import": "^4.0.0",
+    "pump": "^3.0.0",
+    "@tryghost/release-utils": "^0.8.1"
+  }
+}

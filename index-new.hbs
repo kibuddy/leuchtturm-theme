@@ -1,0 +1,173 @@
+{{!< default}}
+
+{{!-- Leuchtturm Hero Section - MEDIENKOMPETENZ FOKUS --}}
+<section class="leuchtturm-hero">
+    <div class="container">
+        <div class="hero-content">
+            <svg class="hero-lighthouse" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="58" stroke="#f39c12" stroke-width="4" opacity="0.3"/>
+                <circle cx="60" cy="60" r="45" stroke="#f39c12" stroke-width="3" opacity="0.5"/>
+                <circle cx="60" cy="60" r="32" stroke="#f39c12" stroke-width="2" opacity="0.7"/>
+                <path d="M60 20 L70 40 L50 40 Z" fill="#f39c12" opacity="0.9"/>
+                <rect x="55" y="40" width="10" height="40" fill="#e67e22"/>
+                <path d="M50 80 L70 80 L65 95 L55 95 Z" fill="#16213e"/>
+                <circle cx="60" cy="25" r="8" fill="#fff" opacity="0.9">
+                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+            
+            <h1 class="hero-title">Medienkompetenz statt Verbote</h1>
+            <p class="hero-subtitle">
+                Energie folgt der Aufmerksamkeit. Frequenz formt die Realität.<br>
+                Ich zeige dir, wie digitale Werkzeuge analoge Werte schaffen – durch Bildung, nicht durch Verbote.<br>
+                <strong>Digital beeinflusst Analog. Medienkompetenz ist der Schlüssel.</strong>
+            </p>
+            
+            <div class="hero-cta">
+                <a href="/leuchtturm-bildung" class="btn btn-primary">Mehr erfahren →</a>
+                <a href="#newsletter" class="btn btn-secondary">Newsletter</a>
+                <a href="/shop" class="btn btn-tertiary">Shop</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{!-- Feature Grid - MEDIENKOMPETENZ FOKUS --}}
+<section class="feature-grid">
+    <div class="container">
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>Bildung statt Verbot</h3>
+                <p>Medienkompetenz bedeutet verstehen, nicht verbieten. Ich zeige Familien, wie digitale Tools funktionieren – ohne Angst, mit Kontrolle.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Energie & Frequenz</h3>
+                <p>Wo deine Aufmerksamkeit hinfließt, fließt deine Energie. Digitale Frequenzen prägen analoge Realitäten. Ich lehre bewussten Medienkonsum.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Digital → Analog</h3>
+                <p>Die digitale Welt formt die analoge. Crypto wird zu Bildung. KI wird zu Werkzeugen. Content wird zu Community. Ich baue die Brücke.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{!-- Latest Posts --}}
+<section class="latest-posts">
+    <div class="container">
+        <h2 class="section-title">Neueste Beiträge</h2>
+        
+        <div class="post-grid">
+            {{#foreach posts}}
+                <article class="post-card {{post_class}}">
+                    {{#if feature_image}}
+                        <a class="post-card-image-link" href="{{url}}">
+                            <img class="post-card-image" src="{{img_url feature_image size="m"}}" alt="{{title}}" loading="lazy"/>
+                        </a>
+                    {{/if}}
+                    
+                    <div class="post-card-content">
+                        <header class="post-card-header">
+                            {{#if primary_tag}}
+                                <div class="post-card-tags">
+                                    <a href="{{primary_tag.url}}" class="post-tag">{{primary_tag.name}}</a>
+                                </div>
+                            {{/if}}
+                            
+                            <h2 class="post-card-title">
+                                <a href="{{url}}">{{title}}</a>
+                            </h2>
+                        </header>
+                        
+                        {{#if excerpt}}
+                            <section class="post-card-excerpt">
+                                <p>{{excerpt words="30"}}</p>
+                            </section>
+                        {{/if}}
+                        
+                        <footer class="post-card-meta">
+                            <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
+                            <span class="reading-time">{{reading_time}}</span>
+                        </footer>
+                    </div>
+                </article>
+            {{/foreach}}
+        </div>
+    </div>
+</section>
+
+{{!-- Newsletter CTA - FREQUENZ-WAHL --}}
+<section class="newsletter-section" id="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <div class="newsletter-icon">📧</div>
+            <h2>Wähle deine Frequenz</h2>
+            <p>Medienkompetenz, Crypto-Analysen, KI-Tools – wähle wie oft du von mir hörst.</p>
+            
+            <div class="newsletter-frequency">
+                <label class="frequency-option">
+                    <input type="radio" name="frequency" value="daily" />
+                    <span class="frequency-label">
+                        <strong>Täglich</strong>
+                        <small>Tägliche Insights, Deep-Dives</small>
+                    </span>
+                </label>
+                
+                <label class="frequency-option">
+                    <input type="radio" name="frequency" value="weekly" checked />
+                    <span class="frequency-label">
+                        <strong>Wöchentlich</strong>
+                        <small>Jeden Freitag, kompakt</small>
+                    </span>
+                </label>
+                
+                <label class="frequency-option">
+                    <input type="radio" name="frequency" value="monthly" />
+                    <span class="frequency-label">
+                        <strong>Monatlich</strong>
+                        <small>Große Updates, Highlights</small>
+                    </span>
+                </label>
+            </div>
+            
+            <form class="newsletter-form" id="newsletter-signup">
+                <input 
+                    type="email" 
+                    name="email"
+                    placeholder="Deine Email-Adresse" 
+                    required
+                    class="newsletter-input"
+                />
+                <button type="submit" class="btn btn-newsletter">Abonnieren</button>
+            </form>
+            <p class="newsletter-note">Kostenlos. Jederzeit abmeldbar. Keine Werbung (nur eigene Produkte).</p>
+        </div>
+    </div>
+</section>
+
+{{!-- Stats Counter --}}
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-count="127">0</div>
+                <div class="stat-label">Familien unterstützt</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number" data-count="23">0</div>
+                <div class="stat-label">Workshops durchgeführt</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number" data-count="1840">0</div>
+                <div class="stat-label">Newsletter-Abonnenten</div>
+            </div>
+        </div>
+    </div>
+</section>

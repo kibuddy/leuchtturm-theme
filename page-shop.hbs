@@ -1,0 +1,211 @@
+{{!< default}}
+
+<article class="article {{post_class}}">
+
+<header class="article-header gh-canvas">
+    <h1 class="article-title">Shop – Medienkompetenz Produkte</h1>
+    <p class="article-excerpt">Werkzeuge, Kurse und Ressourcen für digitale Souveränität</p>
+</header>
+
+<section class="gh-content gh-canvas">
+    
+    {{!-- Under Construction Notice --}}
+    <div class="shop-notice">
+        <div class="notice-icon">🚧</div>
+        <h2>Shop in Bearbeitung</h2>
+        <p>Ich baue gerade etwas Besonderes für dich. Bald verfügbar:</p>
+    </div>
+    
+    {{!-- Product Preview Grid --}}
+    <div class="product-preview-grid">
+        
+        <div class="product-card coming-soon">
+            <div class="product-image">
+                <div class="product-icon">📚</div>
+            </div>
+            <div class="product-content">
+                <h3>Medienkompetenz-Kurs</h3>
+                <p>4-Wochen Intensiv-Kurs: Digitale Werkzeuge verstehen, nicht fürchten.</p>
+                <div class="product-price">€149 <span class="price-note">Pay-What-You-Can</span></div>
+                <button class="btn btn-disabled">Bald verfügbar</button>
+            </div>
+        </div>
+        
+        <div class="product-card coming-soon">
+            <div class="product-image">
+                <div class="product-icon">🎓</div>
+            </div>
+            <div class="product-content">
+                <h3>v7 Bootcamp</h3>
+                <p>7 Wochen, 7 Säulen: Wissen, Gemeinschaft, Hoffnung, Praxis, Technologie, Intergenerational, Langfristigkeit.</p>
+                <div class="product-price">€199 <span class="price-note">Early Bird</span></div>
+                <button class="btn btn-disabled">März 2026</button>
+            </div>
+        </div>
+        
+        <div class="product-card coming-soon">
+            <div class="product-image">
+                <div class="product-icon">🤖</div>
+            </div>
+            <div class="product-content">
+                <h3>KI-Buddy Abo</h3>
+                <p>Persönlicher KI-Assistent: Finanz-Buddy, Bildungs-Buddy, Community-Buddy.</p>
+                <div class="product-price">€29/Monat <span class="price-note">Beta-Zugang</span></div>
+                <button class="btn btn-disabled">Beta Q2 2026</button>
+            </div>
+        </div>
+        
+        <div class="product-card coming-soon">
+            <div class="product-image">
+                <div class="product-icon">📖</div>
+            </div>
+            <div class="product-content">
+                <h3>eBook: Leuchttürme bauen</h3>
+                <p>Kompletter Guide: Von der Idee zum eigenen Bildungsträger.</p>
+                <div class="product-price">€19</div>
+                <button class="btn btn-disabled">Februar 2026</button>
+            </div>
+        </div>
+        
+        <div class="product-card coming-soon">
+            <div class="product-image">
+                <div class="product-icon">🏠</div>
+            </div>
+            <div class="product-content">
+                <h3>SuperHome Setup</h3>
+                <p>Privacy-first Smart Home: Nextcloud, PhotoPrism, eigene Cloud – Setup-Service.</p>
+                <div class="product-price">€299 <span class="price-note">Einmalig</span></div>
+                <button class="btn btn-disabled">Verfügbar ab März</button>
+            </div>
+        </div>
+        
+        <div class="product-card coming-soon">
+            <div class="product-image">
+                <div class="product-icon">👨‍👩‍👧</div>
+            </div>
+            <div class="product-content">
+                <h3>Familien-Workshop</h3>
+                <p>Intergenerationales Lernen: Oma, Eltern, Kinder – gemeinsam Medienkompetenz aufbauen.</p>
+                <div class="product-price">€99/Familie</div>
+                <button class="btn btn-disabled">Buchbar ab März</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    {{!-- Newsletter CTA --}}
+    <div class="shop-cta">
+        <h3>Benachrichtigung bei Launch?</h3>
+        <p>Trage dich in den Newsletter ein – du bekommst Frühzugang + Sonderpreise.</p>
+        <a href="/#newsletter" class="btn btn-primary">Zum Newsletter →</a>
+    </div>
+    
+</section>
+
+</article>
+
+<style>
+.shop-notice {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff3cd;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.notice-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.shop-notice h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #856404;
+}
+
+.product-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+}
+
+.product-card.coming-soon {
+    opacity: 0.85;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.product-image {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 3rem;
+    text-align: center;
+}
+
+.product-icon {
+    font-size: 5rem;
+}
+
+.product-content {
+    padding: 2rem;
+}
+
+.product-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.product-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f39c12;
+    margin-bottom: 1rem;
+}
+
+.price-note {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 400;
+}
+
+.btn-disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 700;
+    width: 100%;
+}
+
+.shop-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.shop-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+</style>

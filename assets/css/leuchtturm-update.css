@@ -1,0 +1,87 @@
+/* NEWSLETTER FREQUENCY SELECTOR */
+
+.newsletter-frequency {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.frequency-option {
+    display: block;
+    cursor: pointer;
+}
+
+.frequency-option input[type="radio"] {
+    display: none;
+}
+
+.frequency-label {
+    display: block;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    transition: all 0.3s;
+    min-width: 180px;
+    text-align: center;
+}
+
+.frequency-label strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.frequency-label small {
+    display: block;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.frequency-option input[type="radio"]:checked + .frequency-label {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* SHOP BUTTON */
+.btn-tertiary {
+    background: transparent;
+    color: var(--light-text);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-tertiary:hover {
+    background: var(--primary-color);
+    color: var(--light-text);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .newsletter-frequency {
+        flex-direction: column;
+    }
+    
+    .frequency-label {
+        width: 100%;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-input,
+    .btn-newsletter {
+        width: 100%;
+    }
+}
