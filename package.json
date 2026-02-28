@@ -10,6 +10,7 @@
   "license": "MIT",
   "author": {
     "name": "Marek Schilke",
+    "email": "marek.schilke@gmail.com",
     "url": "https://ki-buddy.cloud"
   },
   "keywords": [
@@ -54,6 +55,24 @@
         "type": "select",
         "options": ["Landing", "Highlight", "Magazine", "Search", "Hidden"],
         "default": "Landing"
+      },
+      "feed_layout": {
+        "type": "select",
+        "options": ["Classic", "Grid", "List"],
+        "default": "Classic"
+      },
+      "post_image_style": {
+        "type": "select",
+        "options": ["Wide", "Full", "Small", "Hidden"],
+        "default": "Wide"
+      },
+      "email_signup_text": {
+        "type": "text",
+        "default": "Sign up for more like this"
+      },
+      "show_recent_posts_footer": {
+        "type": "boolean",
+        "default": true
       },
       "color_scheme": {
         "type": "select",
